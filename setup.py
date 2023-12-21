@@ -13,7 +13,7 @@ libffm = Extension('ffm.libffm',
 
 # Please use setup_pip.py for generating and deploying pip installation
 # detailed instruction in setup_pip.py
-setup(name='ffm',
+setup(name='pyffm',
       version='1.0',
       description="LibFFM Python Package",
       long_description="LibFFM Python Package",
@@ -26,7 +26,7 @@ setup(name='ffm',
       maintainer='keyunluo',
       maintainer_email='streamer.ky@foxmail.com',
       zip_safe=False,
-      packages=['ffm'],
+      packages=['pyffm'],
       ext_modules = [libffm],
       include_package_data=True,
       exclude_package_data = { '': ['*.pyc', '*.cpp'] },
