@@ -137,7 +137,7 @@ def print_line(data=None, val=True):
             print('%-8d%-16.4f%-16.4f%-16.4f%-8d' %(data[0], data[1], data[2], data[3], data[4]))
     else:
         if data is None:
-            print('%-8s%-16s%-16s%-16s%-8s' %("Iter", "Train_Loss", "Train_Score", "Best_Iter"))
+            print('%-8s%-16s%-16s%-8s' %("Iter", "Train_Loss", "Train_Score", "Best_Iter"))
         else:
             print('%-8d%-16.4f%-16.4f%-8d' %(data[0], data[1], data[2], data[3]))
 
