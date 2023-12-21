@@ -4,7 +4,7 @@ import sys
 sys.dont_write_bytecode = True
 os_type = '_WIN32' if sys.platform.startswith('win32') else 'LINUX'
 
-libffm = Extension('ffm.libffm',
+libffm = Extension('pyffm.libffm',
                    extra_compile_args = ["-Wall", "-O3",  "-std=c++11", "-march=native", "-DUSESSE", "-DDEBUG=0", "-D%s" % os_type], 
                    include_dirs = ['libffm'], 
                    sources = ['pyffm/ffm-wrapper.cpp', 'libffm/timer.cpp'],
