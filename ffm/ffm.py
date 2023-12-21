@@ -243,8 +243,7 @@ class FFM(BaseEstimator, ClassifierMixin):
             train_data = FFMData(X, y)
 
         # Init Model
-        self.init_model(train_data) 
-        self.set_params(num_iter=num_iter, early_stopping=early_stopping, metric=metric)
+        self.init_model(train_data)
         
         # Translate Validation Data
         val = True if val_data is not None else False
