@@ -179,6 +179,7 @@ class Prediction:
 class FFM(BaseEstimator, ClassifierMixin):
     def __init__(self, eta=0.2, lam=0.00002, k=4, normalization=True, num_iter=None, early_stopping=None, metric=None):
         self._params = FFM_Parameter(eta=eta, lam=lam, k=k, normalization=normalization)
+        self.early_stopping = early_stopping
         self.set_params(eta=eta, lam=lam, k=k, normalization=normalization, num_iter=num_iter, early_stopping=early_stopping, metric=metric)
         self._model = None
 
