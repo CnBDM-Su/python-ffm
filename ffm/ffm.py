@@ -278,10 +278,8 @@ class FFM(BaseEstimator, ClassifierMixin):
                     best_model = self._model                   
                 print_line(data=[i, train_loss, train_score, val_score, score_index], val=val) 
             else:
-                if cmp(val_score, score):
-                    score = val_score
-                    score_index = i
-                    best_model = self._model
+                score_index = i
+                best_model = self._model
                 print_line(data=[i, train_loss, train_score, score_index], val=val)
                     
             if (i - score_index) >= early_stopping:
